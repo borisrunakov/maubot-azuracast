@@ -23,12 +23,12 @@ class RadioInfo:
         self.next_playing_song_artist = None
         self.next_playing_song_album = None
 
-    def update(self):
+    async def update(self):
         logger.debug(f"Getting info for station {self.station_idx}")
-        radio_info = self.get_json_data()
+        radio_info = await self.get_json_data()
         self.update_info(radio_info)
 
-    def get_json_data(self):
+    async def get_json_data(self):
         r = httpx.get(self.url)
         return r.json()[self.station_idx]
 

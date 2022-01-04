@@ -36,29 +36,29 @@ class AzuracastBot(Plugin):
     @radio.subcommand("listeners", aliases=['ls'], help="Current listeners counter.")
     async def handler(self, evt: MessageEvent) -> None:
         await evt.mark_read()
-        self.radio.update()
+        await self.radio.update()
         await evt.reply(self.radio.get_listeners(), allow_html=True)
 
     @radio.subcommand("now", help="Playing now.")
     async def handler(self, evt: MessageEvent) -> None:
         await evt.mark_read()
-        self.radio.update()
+        await self.radio.update()
         await evt.reply(self.radio.get_now_playing(), allow_html=True)
 
     @radio.subcommand("next", help="Playing next.")
     async def handler(self, evt: MessageEvent) -> None:
         await evt.mark_read()
-        self.radio.update()
+        await self.radio.update()
         await evt.reply(self.radio.get_next_playing(), allow_html=True)
 
     @radio.subcommand("streamer", aliases=['str'], help="Who's the streamer yo.")
     async def handler(self, evt: MessageEvent) -> None:
         await evt.mark_read()
-        self.radio.update()
+        await self.radio.update()
         await evt.reply(self.radio.get_streamer(), allow_html=True)
 
     @radio.subcommand("all", aliases=['a'], help="Print all available radio information.")
     async def handler(self, evt: MessageEvent) -> None:
         await evt.mark_read()
-        self.radio.update()
+        await self.radio.update()
         await evt.reply(self.radio.get_all(), allow_html=True)
