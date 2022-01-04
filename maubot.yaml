@@ -1,0 +1,11 @@
+maubot: 0.1.0
+id: pb.azuracast
+version: 0.1.1
+license: AGPL-3.0-or-later
+modules:
+    - azuracast
+main_class: AzuracastBot
+database: false
+webapp: false
+extra_files:
+- base-config.yaml
