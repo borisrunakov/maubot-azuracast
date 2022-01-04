@@ -9,3 +9,6 @@ database: false
 webapp: false
 extra_files:
 - base-config.yaml
+dependencies:
+- httpx==0.21.1
+

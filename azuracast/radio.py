@@ -1,13 +1,13 @@
 import logging
-import requests
+import httpx
 
 logger = logging.getLogger(__name__)
 
 
 class RadioInfo:
-    def __init__(self, url, station_num=0):
+    def __init__(self, url, station_idx=0):
         self.url = url
-        self.station_num = station_num
+        self.station_idx = station_idx
         self.radio_station_name = None
         self.radio_station_description = None
         self.current_listeners = None
@@ -24,13 +24,13 @@ class RadioInfo:
         self.next_playing_song_album = None
 
     def update(self):
-        logger.debug(f"Getting info for station {self.station_num}")
+        logger.debug(f"Getting info for station {self.station_idx}")
         radio_info = self.get_json_data()
         self.update_info(radio_info)
 
     def get_json_data(self):
-        r = requests.get(self.url)
-        return r.json()[self.station_num]
+        r = httpx.get(self.url)
+        return r.json()[self.station_idx]
 
     def shape_data(self, radio_info):
         for key, value in radio_info.items():
