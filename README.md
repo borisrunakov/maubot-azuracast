@@ -4,7 +4,7 @@ A maubot to fetch data from your radio station
 ### Setup
 Configure `radio_api_address` and `radio_idx` in `base-config.yaml`
 
-###Available commands:
+### Available commands:
 Command prefix is `!radio`
 
 **Subcommands**:
