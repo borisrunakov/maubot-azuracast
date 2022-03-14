@@ -18,3 +18,5 @@ Command prefix is `!radio`
 ```
 !radio all
 ```
+
+![rall](https://user-images.githubusercontent.com/93043305/158190075-00972ffa-62fb-4a79-8d32-a7bcfcba34cf.png)
