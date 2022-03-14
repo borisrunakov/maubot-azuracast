@@ -10,7 +10,7 @@ Command prefix is `!radio`
 **Subcommands**:
 - `listeners` - Current listeners counter
 - `now` - What is playing now.
-- `next` - What is playing next.
+- `next` - What will play next.
 - `streamer` - Streamer name.
 - `all` - Print all available radio information.
 
